@@ -1,0 +1,269 @@
+* {
+  font-family: "Roboto", Tahoma, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+label {
+  height: 20px;
+}
+
+.logo {
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  margin-top: 20px;
+  margin-left: 40px;
+
+  background-color: red;
+  z-index: 100;
+}
+
+.first {
+  position: absolute;
+  width: 30px;
+  height: 10px;
+  border-radius: 2px;
+  margin-top: 8px;
+  margin-left: 10px;
+  z-index: 100;
+  background-color: white;
+}
+.lijevo {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-left: 4px;
+  z-index: 100;
+  background-color: white;
+  transform: rotate(-30deg);
+}
+.sredina {
+  position: absolute;
+  width: 32px;
+  height: 10px;
+  border-radius: 5px;
+  margin-top: 28px;
+  margin-left: 9px;
+  z-index: 100;
+  background-color: white;
+}
+
+.desno {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  border-radius: 5px;
+  margin-top: 15px;
+  margin-left: 35px;
+  z-index: 100;
+  background-color: white;
+  transform: rotate(30deg);
+}
+
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #0057a3;
+  padding: 20px 0 30px 0;
+  margin: auto;
+  width: 50%;
+  border: 10px;
+  box-shadow: 10px 10px #c9f364;
+  /* box-shadow: 10px 10px #45a049; */
+}
+
+input[type="submit"]:hover {
+  background-color: #c9f364;
+  /* background-color: rgb(83, 175, 72); */
+  color: #0057a3;
+}
+
+h1 {
+  color: #c9f364;
+  /* color: rgb(83, 175, 72); */
+  text-align: center;
+  margin-top: 1px;
+}
+
+.input-container {
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 48px;
+  margin: 10px auto;
+  max-width: 400px;
+}
+/* @media screen and (min-width: 600px) {
+  .container {
+    background-color: violet !important;
+  }
+} */
+
+.input-container label {
+  height: 20px;
+  position: absolute;
+  top: calc((100% - 20px) / 2);
+  z-index: 100;
+  left: 12px;
+  transition-duration: 0.3s;
+}
+
+input {
+  height: 100%;
+  width: 100%;
+  padding: 12px 12px 4px 12px;
+  border: none;
+  border-radius: 4px;
+  opacity: 0.85;
+  display: block;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+input [type="submit"] {
+  background-color: tomato;
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+input [type="submit"]:hover {
+  background-color: #c9f364;
+  /* background-color: #45a049; */
+}
+
+input:hover {
+  opacity: 1;
+  color: #c9f364;
+  /* color: rgb(83, 175, 72); */
+}
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+}
+
+.input-container > input:focus + label {
+  font-size: 10px;
+  top: 4px;
+}
+
+.button {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 25px auto;
+  width: 200px;
+  height: 60px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.button > input {
+  cursor: pointer;
+}
+
+.button > input:active {
+  transform: translateY(3px);
+  font-size: 30px;
+}
+
+/* body {
+  margin: 0;
+  padding: 0;
+  background: #262626;
+} */
+.container-ball {
+  position: absolute;
+  top: 70%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+}
+
+/* -animation-name: cssAnimation;
+  -animation-duration: 3s;
+  -animation-iteration-count: 1;
+  -animation-timing-function: ease;
+  -animation-fill-mode: forwards;
+}
+@-webkit-keyframes cssAnimation {
+  from {
+    -transform: rotate(0deg) scale(1) skew(0deg) translate(100px);
+  }
+  to {
+    -transform: rotate(0deg) scale(2) skew(0deg) translate(100px);
+  }
+} */
+.balle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #c9f364;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  animation: balle 1.5s linear infinite;
+}
+.balle:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: transparent;
+  left: -65%;
+  filter: blur(1px);
+}
+.balle:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: transparent;
+  right: -65%;
+  filter: blur(1px);
+}
+@keyframes balle {
+  0% {
+    transform: translate(-50%, -50%) translateY(-200px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(0px) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-200px) rotate(360deg);
+  }
+}
+.ombre {
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, 100%);
+  overflow: hidden;
+  filter: blur(2px);
+  z-index: -1;
+  animation: ombre 1.5s linear infinite;
+}
+@keyframes ombre {
+  0% {
+    transform: translate(-50%, 100%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, 100%) scale(0.5);
+  }
+  100% {
+    transform: translate(-50%, 100%) scale(1);
+  }
+}
