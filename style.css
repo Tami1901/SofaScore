@@ -3,9 +3,12 @@
   box-sizing: border-box;
 }
 
-.title1 {
-  margin-bottom: 40px;
-  padding-bottom: 25px;
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
 }
 
 .title1 .titleContainer {
@@ -46,8 +49,8 @@ h1 {
   width: 20px;
   height: 8px;
   border-radius: 2px;
-  margin-top: 12.5px;
-  margin-left: 10px;
+  margin: 12.5px 0px 0px 10px;
+
   z-index: 100;
 }
 
@@ -55,8 +58,8 @@ h1 {
   width: 5px;
   height: 12px;
   border-radius: 2px;
-  margin-top: 16px;
-  margin-left: 4px;
+  margin: 16px 0px 0px 4px;
+
   z-index: 80;
 
   transform: rotate(-20deg);
@@ -65,8 +68,8 @@ h1 {
   width: 28px;
   height: 4px;
   border-radius: 5px;
-  margin-top: 24px;
-  margin-left: 6px;
+  margin: 24px 0px 0px 6px;
+
   z-index: 100;
 }
 
@@ -74,8 +77,8 @@ h1 {
   width: 5px;
   height: 12px;
   border-radius: 2px;
-  margin-top: 16px;
-  margin-left: 31px;
+  margin: 16px 0px 0px 31px;
+
   z-index: 80;
   transform: rotate(20deg);
 }
@@ -86,7 +89,8 @@ h1 {
   background-color: #0057a3;
   padding: 20px 0 30px 0;
   margin: auto;
-  width: 50%;
+  max-width: 600px;
+  width: 90%;
   border: 10px;
   box-shadow: 10px 10px #c9f364;
 }
@@ -138,7 +142,7 @@ input {
 }
 
 input [type="submit"] {
-  background-color: tomato;
+  padding: 8px;
   color: white;
   cursor: pointer;
   transition-duration: 0.3s;
@@ -149,11 +153,6 @@ input [type="submit"]:hover {
 
 input:hover {
   opacity: 1;
-}
-html,
-body {
-  height: 100vh;
-  width: 100vw;
 }
 
 .input-container > input:focus + label {
@@ -172,14 +171,12 @@ body {
   margin: 25px auto;
   width: 200px;
   height: 60px;
-  display: flex;
   text-align: center;
-  align-items: center;
-  justify-content: center;
 }
 
 .button > input {
   cursor: pointer;
+  padding: 8px;
 }
 
 .button > input:active {
