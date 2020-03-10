@@ -8,13 +8,17 @@
   padding-bottom: 25px;
 }
 
-h1 {
-  left: 180px;
+.title1 .titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 
-  position: absolute;
+h1 {
   color: #c9f364;
   text-align: center;
   margin-top: 1px;
+  width: 60%;
 }
 
 /* LOGO */
@@ -100,6 +104,7 @@ input[type="submit"]:hover {
   height: 48px;
   margin: 10px auto;
   max-width: 400px;
+  width: 80%;
 }
 /* @media screen and (min-width: 600px) {
   .container {
@@ -144,7 +149,6 @@ input [type="submit"]:hover {
 
 input:hover {
   opacity: 1;
-  color: #c9f364;
 }
 html,
 body {
@@ -153,6 +157,11 @@ body {
 }
 
 .input-container > input:focus + label {
+  font-size: 10px;
+  top: 4px;
+}
+
+.input-container > input:not(:placeholder-shown) + label {
   font-size: 10px;
   top: 4px;
 }
