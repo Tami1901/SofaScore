@@ -1,0 +1,4 @@
+You don't know JS 
+
+console.log('sofa' + 2 + 4) //sofa24
+console.log(2 + 4 + 'sofa') //6sofa
