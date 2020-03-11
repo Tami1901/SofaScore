@@ -1,0 +1,275 @@
+* {
+  font-family: "Roboto", Tahoma, Helvetica, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+}
+
+.title1 .titleContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  color: #c9f364;
+  text-align: center;
+  margin-top: 1px;
+  width: 60%;
+}
+
+/* LOGO */
+
+.title1 > .logo {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  margin-top: 1px;
+  margin-left: 40px;
+
+  background: linear-gradient(90deg, #459428 50%, rgba(9, 9, 121, 1) 50%);
+  z-index: 100;
+}
+
+.first,
+.lijevo,
+.sredina,
+.desno {
+  position: absolute;
+  background-color: white;
+}
+
+.first {
+  width: 20px;
+  height: 8px;
+  border-radius: 2px;
+  margin: 12.5px 0px 0px 10px;
+
+  z-index: 100;
+}
+
+.lijevo {
+  width: 5px;
+  height: 12px;
+  border-radius: 2px;
+  margin: 16px 0px 0px 4px;
+
+  z-index: 80;
+
+  transform: rotate(-20deg);
+}
+.sredina {
+  width: 28px;
+  height: 4px;
+  border-radius: 5px;
+  margin: 24px 0px 0px 6px;
+
+  z-index: 100;
+}
+
+.desno {
+  width: 5px;
+  height: 12px;
+  border-radius: 2px;
+  margin: 16px 0px 0px 31px;
+
+  z-index: 80;
+  transform: rotate(20deg);
+}
+
+.container {
+  position: relative;
+  border-radius: 5px;
+  background-color: #0057a3;
+  padding: 20px 0 30px 0;
+  margin: auto;
+  max-width: 600px;
+  width: 90%;
+  border: 10px;
+  box-shadow: 10px 10px #c9f364;
+}
+
+input[type="submit"]:hover {
+  background-color: #c9f364;
+  color: #0057a3;
+}
+
+.input-container {
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  height: 48px;
+  margin: 10px auto;
+  max-width: 400px;
+  width: 80%;
+}
+/* @media screen and (min-width: 600px) {
+  .container {
+    background-color: violet !important;
+  }
+} */
+
+/* INPUT */
+
+.input-container label {
+  height: 20px;
+  position: absolute;
+  top: calc((100% - 20px) / 2);
+  z-index: 100;
+  left: 12px;
+  transition-duration: 0.3s;
+}
+
+input {
+  height: 100%;
+  width: 100%;
+  padding: 12px 12px 4px 12px;
+  border: none;
+  border-radius: 4px;
+  opacity: 0.85;
+  display: block;
+  font-size: 20px;
+  line-height: 20px;
+  text-decoration: none;
+  transition-duration: 0.3s;
+}
+
+input [type="submit"] {
+  padding: 8px;
+  color: white;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+input [type="submit"]:hover {
+  background-color: #c9f364;
+}
+
+input:hover {
+  opacity: 1;
+}
+
+.input-container > input:focus + label {
+  font-size: 10px;
+  top: 4px;
+}
+
+.input-container > input:not(:placeholder-shown) + label {
+  font-size: 10px;
+  top: 4px;
+}
+
+.button {
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 25px auto;
+  width: 200px;
+  height: 60px;
+  text-align: center;
+}
+
+.button > input {
+  cursor: pointer;
+  padding: 8px;
+}
+
+.button > input:active {
+  transform: translateY(3px);
+  font-size: 30px;
+}
+
+.container-ball {
+  position: absolute;
+  top: 70%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+}
+
+/* -animation-name: cssAnimation;
+  -animation-duration: 3s;
+  -animation-iteration-count: 1;
+  -animation-timing-function: ease;
+  -animation-fill-mode: forwards;
+}
+@-webkit-keyframes cssAnimation {
+  from {
+    -transform: rotate(0deg) scale(1) skew(0deg) translate(100px);
+  }
+  to {
+    -transform: rotate(0deg) scale(2) skew(0deg) translate(100px);
+  }
+} */
+
+/* TENNIS BALL */
+
+.balle {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #c9f364;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  animation: balle 2.5s linear infinite;
+}
+
+.balle:before,
+.balle:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background: transparent;
+  filter: blur(1px);
+}
+
+.balle:before {
+  left: -65%;
+}
+.balle:after {
+  right: -65%;
+}
+
+@keyframes balle {
+  0% {
+    transform: translate(-50%, -50%) translateY(-200px) rotate(0deg);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(0px) rotate(180deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) translateY(-200px) rotate(360deg);
+  }
+}
+.ombre {
+  position: absolute;
+  width: 120px;
+  height: 45px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, 100%);
+  overflow: hidden;
+  filter: blur(2px);
+  z-index: -1;
+  animation: ombre 2.5s linear infinite;
+}
+@keyframes ombre {
+  0% {
+    transform: translate(-50%, 100%) scale(1);
+  }
+  50% {
+    transform: translate(-50%, 100%) scale(0.5);
+  }
+  100% {
+    transform: translate(-50%, 100%) scale(1);
+  }
+}
