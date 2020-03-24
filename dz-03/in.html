@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <button onclick="reload()" class="btn">Reload data</button>
+
+      <table class="highlight">
+        <thead>
+          <div class="thovi">
+            <tr>
+              <th>ID</th>
+              <th>Country</th>
+              <th>Cases</th>
+              <th>Deaths</th>
+              <th>Actions</th>
+            </tr>
+          </div>
+        </thead>
+        <tbody class="hidden"></tbody>
+      </table>
+      <h3>Loading...</h3>
+    </div>
+    <script src="corona.js"></script>
+  </body>
+</html>
