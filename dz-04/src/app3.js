@@ -1,6 +1,5 @@
 import React from "react";
 const URL = "https://corona.lmao.ninja/countries";
-const keys = ["country", "cases", "deaths"];
 
 class App3 extends React.Component {
   constructor(props) {
@@ -55,9 +54,13 @@ class App3 extends React.Component {
         </thead>
         <tbody>
           {data.map((row, index) => (
-            <tr>
+            <tr key={row.country}>
               <td>
-                <img src={row.countryInfo.flag} style={{ height: "16px" }} />
+                <img
+                  src={row.countryInfo.flag}
+                  alt="flag"
+                  style={{ height: "16px" }}
+                />
                 {row.country}
               </td>
               <td>{row.cases}</td>
